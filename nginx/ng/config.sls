@@ -12,3 +12,5 @@ nginx_config:
     - template: jinja
     - context:
         config: {{ nginx.server.config|json() }}
+    - watch_in:
+      - service: nginx_service
